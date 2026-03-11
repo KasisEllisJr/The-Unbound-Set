@@ -6,7 +6,7 @@ The Unbound Set is a terminal-inspired personal website and digital portfolio fo
 Current version: `v0.1.2`
 
 ## Project Status
-This version refines the homepage structure and improves placeholder content while keeping the site minimal.
+This version introduces a minimal first visual styling pass for the homepage while keeping the structure simple and readable.
 
 ## Current Homepage Sections
 - Home
@@ -19,9 +19,10 @@ This version refines the homepage structure and improves placeholder content whi
 - Homepage layout
 - Navigation links
 - Hero section
-- Project placeholders
-- About, logs, and contact placeholders
-- Minimal CSS and JavaScript setup
+- Project placeholder cards
+- About, logs, and contact sections
+- Minimal visual styling
+- Minimal JavaScript setup
 
 ## Tech Stack
 - HTML
@@ -29,8 +30,8 @@ This version refines the homepage structure and improves placeholder content whi
 - JavaScript
 
 ## Notes
-The `v0.1.x` versions are focused on structure and content layout.
-Visual styling and identity work will be added in later versions.
+The site now has its first dark terminal-inspired visual identity.
+Future versions can expand the styling, project content, and interactivity.
 
 ## Author
 Kasimu Ellis
