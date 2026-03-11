@@ -7,46 +7,77 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#logs">Logs</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="page">
+    <header>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#logs">Logs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <main>
-    <section id="hero">
-      <p>∅</p>
-      <h1>The Unbound Set</h1>
-      <p>Exploring Data, Code, and Beyond</p>
-    </section>
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <p class="hero-symbol">∅</p>
+          <h1>The Unbound Set</h1>
+          <p class="hero-tagline">
+            A terminal-inspired personal space for projects, data, code, and digital work.
+          </p>
+        </div>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>Project cards will go here.</p>
-    </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+          <article>
+            <h3>Featured Project</h3>
+            <p>A highlighted build, case study, or portfolio piece will go here.</p>
+          </article>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>About content will go here.</p>
-    </section>
+          <article>
+            <h3>Project Archive</h3>
+            <p>Additional projects and technical work will be listed here.</p>
+          </article>
 
-    <section id="logs">
-      <h2>Logs</h2>
-      <p>Logs or updates will go here.</p>
-    </section>
+          <article>
+            <h3>Experimental Work</h3>
+            <p>Creative experiments, prototypes, and in-progress ideas will go here.</p>
+          </article>
+        </div>
+      </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Contact details will go here.</p>
-    </section>
-  </main>
+      <section id="about">
+        <h2>About</h2>
+        <div class="about-content">
+          <p>
+            I am a data analyst and web developer building a personal website to showcase
+            my work, technical skills, and creative projects.
+          </p>
+        </div>
+      </section>
 
-  <footer>
-    <p>> Welcome to The Unbound Set</p>
-  </footer>
+      <section id="logs">
+        <h2>Logs</h2>
+        <div class="logs-content">
+          <p>Development notes, updates, and progress logs will go here.</p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-content">
+          <p>My email, GitHub, LinkedIn, and other contact links will go here.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&gt; Welcome to The Unbound Set</p>
+    </footer>
+  </div>
 
   <script src="homepage.js"></script>
 </body>
