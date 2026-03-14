@@ -3,27 +3,35 @@
 The Unbound Set is a terminal-inspired personal website and digital portfolio for my projects, technical work, and creative development in data analytics and web development.
 
 ## Version
-Current version: `v0.1.3`
+Current version: `v0.1.5`
 
 ## Project Status
-This version adds a more complete homepage identity with a stronger terminal-inspired layout and an interactive command panel.
+This version combines multiple planned updates into one larger homepage milestone. It expands the site with a Current Focus section, improved terminal interactions, stronger project cards, and responsive homepage polish.
 
 ## Current Homepage Sections
 - Home
 - Projects
 - About
+- Focus
 - Logs
 - Contact
 
 ## Current Features
-- Terminal-style header
-- Improved hero section
-- Interactive terminal command panel
-- Project cards
-- About, logs, and contact sections
-- Footer prompt
+- Terminal-style homepage
+- Interactive command panel
+- Real project cards
+- Project status tags
+- Updated profile section
+- Current Focus section
+- Visible development logs
+- Live GitHub, LinkedIn, and email links
 - Dark terminal-inspired visual theme
-- JavaScript command interactions
+- Smooth command-based section navigation
+
+## Featured Projects
+- Flight Map Project
+- Normalization, ERDs and DDL
+- Rogue Lite Game Concept WIP
 
 ## Tech Stack
 - HTML
@@ -31,7 +39,7 @@ This version adds a more complete homepage identity with a stronger terminal-ins
 - JavaScript
 
 ## Notes
-This version moves the homepage closer to the intended Unbound Set identity by combining a cleaner terminal UI with light interaction.
+This release acts as a bundled milestone version, combining several planned refinements into one pushed homepage update.
 
 ## Author
 Kasimu Ellis

@@ -11,17 +11,28 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="background-grid" aria-hidden="true"></div>
+
   <div class="page">
     <header class="site-header">
       <div class="header-top">
-        <p class="site-status">STATUS: ONLINE</p>
-        <p class="site-access">ACCESS: GRANTED</p>
+        <div class="header-lights" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="header-status">
+          <p>STATUS: ONLINE</p>
+          <p>ACCESS: GRANTED</p>
+        </div>
       </div>
 
       <nav class="site-nav">
         <a href="#hero">Home</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
+        <a href="#focus">Focus</a>
         <a href="#logs">Logs</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -31,12 +42,13 @@
       <section id="hero" class="hero-section">
         <div class="hero-copy">
           <p class="hero-symbol">∅</p>
+          <p class="hero-label">PERSONAL TERMINAL // DIGITAL ARCHIVE</p>
           <h1>The Unbound Set</h1>
           <p class="hero-tagline">
             A terminal-inspired personal space for projects, data, code, and digital work.
           </p>
           <p class="hero-subtext">
-            Built as a digital archive for analytics work, web development, technical experiments, and creative logs.
+            Built as a digital archive for analytics work, web development, technical experiments, and creative systems.
           </p>
         </div>
 
@@ -49,14 +61,17 @@
 
           <div class="terminal-screen">
             <p><span class="prompt">visitor@unbound-set:~$</span> open profile</p>
-            <p class="terminal-response">Data Analyst | Web Developer</p>
+            <p class="terminal-response">Kasimu Ellis // Data Analyst // Web Developer</p>
+
             <p><span class="prompt">visitor@unbound-set:~$</span> show focus</p>
-            <p class="terminal-response">Projects, dashboards, front-end systems, creative tech</p>
+            <p class="terminal-response">Data, analytics, web development, design, and creative technology</p>
+
             <p><span class="prompt">visitor@unbound-set:~$</span> run command</p>
 
             <div class="command-buttons">
               <button type="button" data-command="projects">show projects</button>
               <button type="button" data-command="about">read about</button>
+              <button type="button" data-command="focus">show focus</button>
               <button type="button" data-command="logs">open logs</button>
               <button type="button" data-command="contact">contact</button>
             </div>
@@ -67,53 +82,182 @@
       </section>
 
       <section id="projects">
-        <h2>Projects</h2>
+        <div class="section-heading">
+          <p class="section-label">01 // PROJECTS</p>
+          <h2>Selected Work</h2>
+        </div>
+
         <div class="project-list">
-          <article class="card">
-            <h3>Featured Project</h3>
-            <p>A highlighted build, case study, or technical portfolio piece will go here.</p>
+          <article class="card project-card">
+            <div class="card-top">
+              <p class="card-label">WEB / DATA</p>
+              <span class="project-status">ACTIVE</span>
+            </div>
+            <h3>Flight Map Project</h3>
+            <p>
+              A real-time interactive mapping project built to visualize live location data
+              through a responsive interface using modern web development tools.
+            </p>
+            <p class="card-meta">HTML / CSS / JavaScript / Leaflet / API Data</p>
+            <div class="card-links">
+              <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+              <a href="#logs">View Log</a>
+            </div>
           </article>
 
-          <article class="card">
-            <h3>Project Archive</h3>
-            <p>Additional projects, development work, and technical builds will be listed here.</p>
+          <article class="card project-card">
+            <div class="card-top">
+              <p class="card-label">DATABASE</p>
+              <span class="project-status">ARCHIVE</span>
+            </div>
+            <h3>Normalization, ERDs and DDL</h3>
+            <p>
+              A database design project focused on normalization, entity relationship diagrams,
+              and structured schema creation for well-organized relational systems.
+            </p>
+            <p class="card-meta">Database Design / ERD / SQL / DDL</p>
+            <div class="card-links">
+              <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+              <a href="#logs">View Log</a>
+            </div>
           </article>
 
-          <article class="card">
-            <h3>Experimental Work</h3>
-            <p>Creative experiments, prototypes, and in-progress ideas will go here.</p>
+          <article class="card project-card">
+            <div class="card-top">
+              <p class="card-label">CREATIVE SYSTEMS</p>
+              <span class="project-status">WIP</span>
+            </div>
+            <h3>Rogue Lite Game Concept WIP</h3>
+            <p>
+              A work-in-progress game concept exploring progression systems, mechanics,
+              structure, and creative worldbuilding through iterative design.
+            </p>
+            <p class="card-meta">Game Design / Systems / Worldbuilding</p>
+            <div class="card-links">
+              <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+              <a href="#logs">View Log</a>
+            </div>
           </article>
         </div>
       </section>
 
       <section id="about">
-        <h2>About</h2>
+        <div class="section-heading">
+          <p class="section-label">02 // ABOUT</p>
+          <h2>Profile</h2>
+        </div>
+
         <div class="card">
           <p>
-            I am a data analyst and web developer building a personal website to showcase
-            my work, technical skills, and creative projects in a more immersive way.
+            I am a creative person who enjoys being active and exploring different areas of technology,
+            especially data, numbers, statistics, and development. I like building websites and applications,
+            working with databases and analytics, and exploring design across digital projects.
+          </p>
+          <p>
+            Outside of tech, I am also interested in fiction writing, tabletop games, Pokémon,
+            and other creative experiences that inspire the way I build and think.
           </p>
         </div>
       </section>
 
+      <section id="focus">
+        <div class="section-heading">
+          <p class="section-label">03 // CURRENT FOCUS</p>
+          <h2>What I’m Building</h2>
+        </div>
+
+        <div class="focus-grid">
+          <article class="card">
+            <h3>Data & Analytics</h3>
+            <p>Exploring dashboards, structured data, numbers, statistics, and technical analysis.</p>
+          </article>
+
+          <article class="card">
+            <h3>Web Development</h3>
+            <p>Designing and building personal, interactive, and portfolio-driven web experiences.</p>
+          </article>
+
+          <article class="card">
+            <h3>Creative Systems</h3>
+            <p>Developing game concepts, fictional worlds, and other idea-driven technical projects.</p>
+          </article>
+        </div>
+      </section>
+
       <section id="logs">
-        <h2>Logs</h2>
+        <div class="section-heading">
+          <p class="section-label">04 // LOGS</p>
+          <h2>Development Logs</h2>
+        </div>
+
         <div class="card">
-          <p>Development notes, updates, experiments, and progress logs will go here.</p>
+          <p>
+            This section tracks development updates in the style of game patch notes,
+            documenting additions, changes, fixes, and progress over time while keeping older logs visible.
+          </p>
+
+          <div class="log-list">
+            <article class="log-entry">
+              <h3>v0.1.5</h3>
+              <p>
+                Added a Current Focus section, improved homepage interactions, upgraded project cards with status tags,
+                expanded terminal commands, and applied responsive polish across the homepage.
+              </p>
+            </article>
+
+            <article class="log-entry">
+              <h3>v0.1.4</h3>
+              <p>
+                Bundled major homepage progress into one milestone: terminal-inspired visual identity,
+                real project cards, updated profile content, live contact links, visible development logs,
+                and interactive command panel behavior.
+              </p>
+            </article>
+
+            <article class="log-entry">
+              <h3>v0.1.3</h3>
+              <p>Added the first stronger terminal-style visual pass to the homepage.</p>
+            </article>
+
+            <article class="log-entry">
+              <h3>v0.1.2</h3>
+              <p>Refined the homepage structure and improved placeholder content.</p>
+            </article>
+
+            <article class="log-entry">
+              <h3>v0.1.1</h3>
+              <p>Added the homepage layout with navigation, hero section, and content sections.</p>
+            </article>
+
+            <article class="log-entry">
+              <h3>v0.1.0</h3>
+              <p>Initialized The Unbound Set project structure and linked the base files.</p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section id="contact">
-        <h2>Contact</h2>
-        <div class="card">
-          <p>Email, GitHub, LinkedIn, and other contact links will go here.</p>
+        <div class="section-heading">
+          <p class="section-label">05 // CONTACT</p>
+          <h2>Connect</h2>
+        </div>
+
+        <div class="card contact-card">
+          <p>Use the links below to connect with me and view more of my work.</p>
+
+          <div class="contact-links">
+            <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/kasimu-ellis-3b638b238/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:kasis.ellisjr@gmail.com">Email</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>&gt; Welcome to The Unbound Set</p>
-      <p class="footer-note">Terminal initialized. Awaiting input.</p>
+      <p class="footer-note">System stable. Bundled v0.1.5 milestone deployed.</p>
     </footer>
   </div>
 
