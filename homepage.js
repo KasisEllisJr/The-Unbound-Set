@@ -3,6 +3,9 @@ const commandButtons = document.querySelectorAll(".command-buttons button");
 const detailButtons = document.querySelectorAll(".detail-button");
 const logFilters = document.querySelectorAll(".log-filter");
 const logEntries = document.querySelectorAll(".log-entry");
+const logToggles = document.querySelectorAll(".log-toggle");
+const navToggle = document.getElementById("nav-toggle");
+const siteNav = document.getElementById("site-nav");
 
 const detailTitle = document.getElementById("detail-title");
 const detailSummary = document.getElementById("detail-summary");
@@ -28,7 +31,7 @@ const commandResponses = {
     target: "#stats"
   },
   logs: {
-    text: "Development logs loaded: filter by major or structure updates.",
+    text: "Development logs loaded: filter, expand, or collapse entries below.",
     target: "#logs"
   },
   contact: {
@@ -70,21 +73,46 @@ const projectDetails = {
   }
 };
 
+let typingTimerId = null;
+
+function typeOutput(text) {
+  if (!output) return;
+  if (typingTimerId) clearInterval(typingTimerId);
+
+  output.textContent = "";
+  let index = 0;
+
+  typingTimerId = setInterval(() => {
+    output.textContent += text[index];
+    index += 1;
+
+    if (index >= text.length) {
+      clearInterval(typingTimerId);
+      typingTimerId = null;
+    }
+  }, 18);
+}
+
 commandButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const command = button.dataset.command;
     const response = commandResponses[command];
 
     if (!response) {
-      output.textContent = "Command not recognized.";
+      typeOutput("Command not recognized.");
       return;
     }
 
-    output.textContent = response.text;
+    typeOutput(response.text);
 
     const targetSection = document.querySelector(response.target);
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    if (siteNav && window.innerWidth <= 700) {
+      siteNav.classList.remove("open");
+      navToggle?.setAttribute("aria-expanded", "false");
     }
   });
 });
@@ -106,7 +134,7 @@ detailButtons.forEach((button) => {
     });
 
     detailPanel.scrollIntoView({ behavior: "smooth", block: "start" });
-    output.textContent = `Detail panel loaded: ${project.title}.`;
+    typeOutput(`Detail panel loaded: ${project.title}.`);
   });
 });
 
@@ -123,11 +151,31 @@ logFilters.forEach((button) => {
       entry.style.display = shouldShow ? "block" : "none";
     });
 
-    output.textContent =
+    typeOutput(
       filter === "all"
         ? "Showing all development logs."
-        : `Showing ${filter} development logs.`;
+        : `Showing ${filter} development logs.`
+    );
   });
 });
 
-console.log("v0.1.7 loaded.");
+logToggles.forEach((button) => {
+  button.addEventListener("click", () => {
+    const entry = button.closest(".log-entry");
+    const body = entry?.querySelector(".log-entry-body");
+    if (!body) return;
+
+    const isHidden = body.classList.toggle("collapsed");
+    button.textContent = isHidden ? "Expand" : "Collapse";
+  });
+});
+
+if (navToggle && siteNav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
+
+typeOutput("Awaiting input...");
+console.log("v0.1.8 loaded.");
