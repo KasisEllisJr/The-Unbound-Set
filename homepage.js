@@ -3,11 +3,11 @@ const commandButtons = document.querySelectorAll(".command-buttons button");
 
 const commandResponses = {
   projects: {
-    text: "Selected work loaded: Flight Map Project, Normalization / ERDs / DDL, Rogue Lite Game Concept WIP.",
+    text: "Selected work loaded: featured Flight Map Project, database systems work, and Rogue Lite concept design.",
     target: "#projects"
   },
   about: {
-    text: "Kasimu Ellis: creative developer focused on data, analytics, web development, design, databases, and technical exploration.",
+    text: "Profile loaded: creative developer focused on analytics, web development, design, and technical exploration.",
     target: "#about"
   },
   focus: {
@@ -15,7 +15,7 @@ const commandResponses = {
     target: "#focus"
   },
   logs: {
-    text: "Development logs loaded: version history is visible below in patch-note format.",
+    text: "Development logs loaded: milestone history is visible below in patch-note format.",
     target: "#logs"
   },
   contact: {
@@ -43,4 +43,4 @@ commandButtons.forEach((button) => {
   });
 });
 
-console.log("v0.1.5 loaded.");
+console.log("v0.1.6 loaded.");
