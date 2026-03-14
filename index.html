@@ -96,6 +96,20 @@
               <button type="button" data-command="contact">contact</button>
             </div>
 
+            <form class="command-form" id="command-form">
+              <label for="command-input" class="command-label">
+                <span class="prompt">visitor@unbound-set:~$</span>
+              </label>
+              <input
+                id="command-input"
+                class="command-input"
+                type="text"
+                name="command"
+                placeholder="type a command..."
+                autocomplete="off"
+              />
+            </form>
+
             <p id="command-output" class="terminal-response">Awaiting input...</p>
           </div>
         </div>
@@ -107,7 +121,14 @@
           <h2>Selected Work</h2>
         </div>
 
-        <article class="card featured-project">
+        <div class="project-filters">
+          <button type="button" class="project-filter active" data-project-filter="all">All</button>
+          <button type="button" class="project-filter" data-project-filter="web">Web / Data</button>
+          <button type="button" class="project-filter" data-project-filter="database">Database</button>
+          <button type="button" class="project-filter" data-project-filter="creative">Creative</button>
+        </div>
+
+        <article class="card featured-project project-item" data-project-type="web">
           <div class="featured-header">
             <div>
               <p class="card-label">FEATURED PROJECT</p>
@@ -137,7 +158,7 @@
         </article>
 
         <div class="project-list">
-          <article class="card project-card">
+          <article class="card project-card project-item" data-project-type="database">
             <div class="card-top">
               <p class="card-label">DATABASE</p>
               <span class="project-status">ARCHIVE</span>
@@ -155,7 +176,7 @@
             </div>
           </article>
 
-          <article class="card project-card">
+          <article class="card project-card project-item" data-project-type="creative">
             <div class="card-top">
               <p class="card-label">CREATIVE SYSTEMS</p>
               <span class="project-status">WIP</span>
@@ -176,7 +197,11 @@
 
         <article class="card project-detail-panel" id="project-detail-panel">
           <p class="card-label">DETAIL PANEL</p>
-          <h3 id="detail-title">Flight Map Project</h3>
+          <div class="detail-header">
+            <h3 id="detail-title">Flight Map Project</h3>
+            <span id="detail-status" class="project-status">ACTIVE</span>
+          </div>
+          <p id="detail-category" class="detail-category">WEB / DATA</p>
           <p id="detail-summary">
             Interactive mapping build focused on live data visualization, interface design, and responsive display.
           </p>
@@ -294,6 +319,19 @@
           </div>
 
           <div class="log-list">
+            <article class="log-entry" data-type="major">
+              <div class="log-entry-top">
+                <h3>v0.1.9</h3>
+                <button type="button" class="log-toggle">Collapse</button>
+              </div>
+              <div class="log-entry-body">
+                <p>
+                  Added project filtering, terminal command input, email copy action, back-to-top navigation,
+                  upgraded project detail information, and applied pre-release homepage polish.
+                </p>
+              </div>
+            </article>
+
             <article class="log-entry" data-type="major">
               <div class="log-entry-top">
                 <h3>v0.1.8</h3>
@@ -416,6 +454,7 @@
             <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/kasimu-ellis-3b638b238/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="mailto:kasis.ellisjr@gmail.com">Email</a>
+            <button type="button" id="copy-email-button">Copy Email</button>
           </div>
         </div>
       </section>
@@ -425,16 +464,18 @@
       <div class="footer-grid">
         <div>
           <p>&gt; Welcome to The Unbound Set</p>
-          <p class="footer-note">System stable. Bundled v0.1.8 milestone deployed.</p>
+          <p class="footer-note">System stable. Bundled v0.1.9 milestone deployed.</p>
         </div>
         <div class="footer-status">
           <p>MODE: PORTFOLIO</p>
           <p>INTERFACE: TERMINAL</p>
-          <p>BUILD: v0.1.8</p>
+          <p>BUILD: v0.1.9</p>
         </div>
       </div>
     </footer>
   </div>
+
+  <button type="button" class="back-to-top" id="back-to-top">Top</button>
 
   <script src="homepage.js"></script>
 </body>
