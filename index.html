@@ -4,11 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Unbound Set</title>
+  <meta
+    name="description"
+    content="The Unbound Set is a terminal-inspired personal website for projects, data, code, and digital work."
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="page">
     <header class="site-header">
+      <div class="header-top">
+        <p class="site-status">STATUS: ONLINE</p>
+        <p class="site-access">ACCESS: GRANTED</p>
+      </div>
+
       <nav class="site-nav">
         <a href="#hero">Home</a>
         <a href="#projects">Projects</a>
@@ -19,13 +28,41 @@
     </header>
 
     <main>
-      <section id="hero">
-        <div class="hero-content">
+      <section id="hero" class="hero-section">
+        <div class="hero-copy">
           <p class="hero-symbol">∅</p>
           <h1>The Unbound Set</h1>
           <p class="hero-tagline">
             A terminal-inspired personal space for projects, data, code, and digital work.
           </p>
+          <p class="hero-subtext">
+            Built as a digital archive for analytics work, web development, technical experiments, and creative logs.
+          </p>
+        </div>
+
+        <div class="terminal-panel">
+          <div class="terminal-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="terminal-screen">
+            <p><span class="prompt">visitor@unbound-set:~$</span> open profile</p>
+            <p class="terminal-response">Data Analyst | Web Developer</p>
+            <p><span class="prompt">visitor@unbound-set:~$</span> show focus</p>
+            <p class="terminal-response">Projects, dashboards, front-end systems, creative tech</p>
+            <p><span class="prompt">visitor@unbound-set:~$</span> run command</p>
+
+            <div class="command-buttons">
+              <button type="button" data-command="projects">show projects</button>
+              <button type="button" data-command="about">read about</button>
+              <button type="button" data-command="logs">open logs</button>
+              <button type="button" data-command="contact">contact</button>
+            </div>
+
+            <p id="command-output" class="terminal-response">Awaiting input...</p>
+          </div>
         </div>
       </section>
 
@@ -34,12 +71,12 @@
         <div class="project-list">
           <article class="card">
             <h3>Featured Project</h3>
-            <p>A highlighted build, case study, or portfolio piece will go here.</p>
+            <p>A highlighted build, case study, or technical portfolio piece will go here.</p>
           </article>
 
           <article class="card">
             <h3>Project Archive</h3>
-            <p>Additional projects and technical work will be listed here.</p>
+            <p>Additional projects, development work, and technical builds will be listed here.</p>
           </article>
 
           <article class="card">
@@ -54,7 +91,7 @@
         <div class="card">
           <p>
             I am a data analyst and web developer building a personal website to showcase
-            my work, technical skills, and creative projects.
+            my work, technical skills, and creative projects in a more immersive way.
           </p>
         </div>
       </section>
@@ -62,20 +99,21 @@
       <section id="logs">
         <h2>Logs</h2>
         <div class="card">
-          <p>Development notes, updates, and progress logs will go here.</p>
+          <p>Development notes, updates, experiments, and progress logs will go here.</p>
         </div>
       </section>
 
       <section id="contact">
         <h2>Contact</h2>
         <div class="card">
-          <p>My email, GitHub, LinkedIn, and other contact links will go here.</p>
+          <p>Email, GitHub, LinkedIn, and other contact links will go here.</p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>&gt; Welcome to The Unbound Set</p>
+      <p class="footer-note">Terminal initialized. Awaiting input.</p>
     </footer>
   </div>
 
