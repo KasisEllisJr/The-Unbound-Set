@@ -72,47 +72,58 @@
           </ul>
         </div>
 
-        <div class="terminal-panel">
-          <div class="terminal-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        <div class="hero-utility">
+          <article class="card hero-panel">
+            <p class="card-label">SYSTEM SUMMARY</p>
+            <ul class="hero-panel-list">
+              <li>Projects: 3 selected areas</li>
+              <li>Sections: 8 homepage modules</li>
+              <li>Focus: data, web, creative systems</li>
+            </ul>
+          </article>
 
-          <div class="terminal-screen">
-            <p><span class="prompt">visitor@unbound-set:~$</span> open profile</p>
-            <p class="terminal-response">Kasimu Ellis // Data Analyst // Web Developer</p>
-
-            <p><span class="prompt">visitor@unbound-set:~$</span> show focus</p>
-            <p class="terminal-response">Data, analytics, web development, design, and creative technology</p>
-
-            <p><span class="prompt">visitor@unbound-set:~$</span> run command</p>
-
-            <div class="command-buttons">
-              <button type="button" data-command="projects">show projects</button>
-              <button type="button" data-command="about">read about</button>
-              <button type="button" data-command="summary">show summary</button>
-              <button type="button" data-command="focus">show focus</button>
-              <button type="button" data-command="stats">show stats</button>
-              <button type="button" data-command="logs">open logs</button>
-              <button type="button" data-command="contact">contact</button>
+          <div class="terminal-panel">
+            <div class="terminal-bar">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
 
-            <form class="command-form" id="command-form">
-              <label for="command-input" class="command-label">
-                <span class="prompt">visitor@unbound-set:~$</span>
-              </label>
-              <input
-                id="command-input"
-                class="command-input"
-                type="text"
-                name="command"
-                placeholder="type a command..."
-                autocomplete="off"
-              />
-            </form>
+            <div class="terminal-screen">
+              <p><span class="prompt">visitor@unbound-set:~$</span> open profile</p>
+              <p class="terminal-response">Kasimu Ellis // Data Analyst // Web Developer</p>
 
-            <p id="command-output" class="terminal-response">Awaiting input...</p>
+              <p><span class="prompt">visitor@unbound-set:~$</span> show focus</p>
+              <p class="terminal-response">Data, analytics, web development, design, and creative technology</p>
+
+              <p><span class="prompt">visitor@unbound-set:~$</span> run command</p>
+
+              <div class="command-buttons">
+                <button type="button" data-command="projects">show projects</button>
+                <button type="button" data-command="about">read about</button>
+                <button type="button" data-command="summary">show summary</button>
+                <button type="button" data-command="focus">show focus</button>
+                <button type="button" data-command="stats">show stats</button>
+                <button type="button" data-command="logs">open logs</button>
+                <button type="button" data-command="contact">contact</button>
+              </div>
+
+              <form class="command-form" id="command-form">
+                <label for="command-input" class="command-label">
+                  <span class="prompt">visitor@unbound-set:~$</span>
+                </label>
+                <input
+                  id="command-input"
+                  class="command-input"
+                  type="text"
+                  name="command"
+                  placeholder="type a command..."
+                  autocomplete="off"
+                />
+              </form>
+
+              <p id="command-output" class="terminal-response">Awaiting input...</p>
+            </div>
           </div>
         </div>
       </section>
@@ -219,7 +230,6 @@
           </article>
         </div>
       </section>
-
 
       <section id="about">
         <div class="section-heading">
@@ -340,19 +350,20 @@
         <div class="featured-log-grid">
           <article class="card featured-log-card">
             <p class="card-label">LATEST MILESTONE</p>
-            <h3>v0.2.0</h3>
+            <h3>v0.2.2</h3>
             <p>
-              Added profile summary, featured log panels, refined contact presentation,
-              improved command behavior, and beta homepage polish.
+              Expanded the homepage into a more polished workspace with better project browsing,
+              stronger hero utility, richer summary flow, and improved content balance.
             </p>
           </article>
 
           <article class="card featured-log-card">
             <p class="card-label">PREVIOUS MILESTONE</p>
-            <h3>v0.1.9</h3>
+            <h3>v0.2.1</h3>
             <p>
-              Added project filtering, terminal command input, upgraded detail panel,
-              copy email action, back-to-top navigation, and pre-release polish.
+              Reworked the projects section into a clearer workspace layout, added the Rogue Lite project card, 
+              improved detail panel flow, added responsive layout polish and detail highlight feedback, and updated 
+              the site to v0.2.1.
             </p>
           </article>
         </div>
@@ -370,6 +381,33 @@
           </div>
 
           <div class="log-list">
+            <article class="log-entry" data-type="major">
+              <div class="log-entry-top">
+                <h3>v0.2.2</h3>
+                <button type="button" class="log-toggle">Collapse</button>
+              </div>
+              <div class="log-entry-body">
+                <p>
+                  Expanded the homepage into a more polished workspace with stronger project browsing,
+                  better layout rhythm, richer summary flow, improved hero utility, and overall portfolio refinement.
+                </p>
+              </div>
+            </article>
+
+            <article class="log-entry" data-type="major">
+              <div class="log-entry-top">
+                <h3>v0.2.1</h3>
+                <button type="button" class="log-toggle">Collapse</button>
+              </div>
+              <div class="log-entry-body">
+                <p>
+                  Reworked the projects section into a clearer workspace layout, added the Rogue Lite project card, 
+                  improved detail panel flow, added responsive layout polish and detail highlight feedback, and updated 
+                  the site to v0.2.1.
+                </p>
+              </div>
+            </article>
+
             <article class="log-entry" data-type="major">
               <div class="log-entry-top">
                 <h3>v0.2.0</h3>
@@ -539,12 +577,12 @@
       <div class="footer-grid">
         <div>
           <p>&gt; Welcome to The Unbound Set</p>
-          <p class="footer-note">System stable. Bundled v0.2.0 beta milestone deployed.</p>
+          <p class="footer-note">System stable. Bundled v0.2.2 milestone deployed.</p>
         </div>
         <div class="footer-status">
           <p>MODE: PORTFOLIO</p>
           <p>INTERFACE: TERMINAL</p>
-          <p>BUILD: v0.2.0</p>
+          <p>BUILD: v0.2.2</p>
         </div>
       </div>
     </footer>

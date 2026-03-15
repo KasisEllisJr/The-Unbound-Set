@@ -187,12 +187,13 @@ detailButtons.forEach((button) => {
       detailPoints.appendChild(li);
     });
 
-    detailPanel.scrollIntoView({ behavior: "smooth", block: "start" });
-    typeOutput(`Detail panel loaded: ${project.title}.`);
     detailPanel.classList.add("detail-flash");
     setTimeout(() => {
       detailPanel.classList.remove("detail-flash");
     }, 450);
+
+    detailPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    typeOutput(`Detail panel loaded: ${project.title}.`);
   });
 });
 
@@ -305,4 +306,4 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => observer.observe(section));
 
 typeOutput("Awaiting input...");
-console.log("v0.2.0 loaded.");
+console.log("v0.2.2 loaded.");
