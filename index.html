@@ -43,6 +43,7 @@
           <a href="#hero">Home</a>
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
+          <a href="#summary">Summary</a>
           <a href="#focus">Focus</a>
           <a href="#stats">Stats</a>
           <a href="#logs">Logs</a>
@@ -90,6 +91,7 @@
             <div class="command-buttons">
               <button type="button" data-command="projects">show projects</button>
               <button type="button" data-command="about">read about</button>
+              <button type="button" data-command="summary">show summary</button>
               <button type="button" data-command="focus">show focus</button>
               <button type="button" data-command="stats">show stats</button>
               <button type="button" data-command="logs">open logs</button>
@@ -247,9 +249,33 @@
         </div>
       </section>
 
+      <section id="summary">
+        <div class="section-heading">
+          <p class="section-label">03 // SUMMARY</p>
+          <h2>Profile Summary</h2>
+        </div>
+
+        <div class="summary-grid">
+          <article class="card summary-card">
+            <h3>Primary Roles</h3>
+            <p>Data Analyst / Web Developer</p>
+          </article>
+
+          <article class="card summary-card">
+            <h3>Core Areas</h3>
+            <p>Analytics, databases, front-end systems, creative technical projects</p>
+          </article>
+
+          <article class="card summary-card">
+            <h3>Creative Interests</h3>
+            <p>Fiction writing, tabletop games, Pokémon, design-driven digital experiences</p>
+          </article>
+        </div>
+      </section>
+
       <section id="focus">
         <div class="section-heading">
-          <p class="section-label">03 // CURRENT FOCUS</p>
+          <p class="section-label">04 // CURRENT FOCUS</p>
           <h2>What I’m Building</h2>
         </div>
 
@@ -273,7 +299,7 @@
 
       <section id="stats">
         <div class="section-heading">
-          <p class="section-label">04 // QUICK STATS</p>
+          <p class="section-label">05 // QUICK STATS</p>
           <h2>Snapshot</h2>
         </div>
 
@@ -284,7 +310,7 @@
           </article>
 
           <article class="card stat-card">
-            <h3>7</h3>
+            <h3>8</h3>
             <p>Homepage Sections</p>
           </article>
 
@@ -302,8 +328,28 @@
 
       <section id="logs">
         <div class="section-heading">
-          <p class="section-label">05 // LOGS</p>
+          <p class="section-label">06 // LOGS</p>
           <h2>Development Logs</h2>
+        </div>
+
+        <div class="featured-log-grid">
+          <article class="card featured-log-card">
+            <p class="card-label">LATEST MILESTONE</p>
+            <h3>v0.2.0</h3>
+            <p>
+              Added profile summary, featured log panels, refined contact presentation,
+              improved command behavior, and beta homepage polish.
+            </p>
+          </article>
+
+          <article class="card featured-log-card">
+            <p class="card-label">PREVIOUS MILESTONE</p>
+            <h3>v0.1.9</h3>
+            <p>
+              Added project filtering, terminal command input, upgraded detail panel,
+              copy email action, back-to-top navigation, and pre-release polish.
+            </p>
+          </article>
         </div>
 
         <div class="card">
@@ -319,6 +365,19 @@
           </div>
 
           <div class="log-list">
+            <article class="log-entry" data-type="major">
+              <div class="log-entry-top">
+                <h3>v0.2.0</h3>
+                <button type="button" class="log-toggle">Collapse</button>
+              </div>
+              <div class="log-entry-body">
+                <p>
+                  Added profile summary cards, featured milestone log panels, refined contact layout,
+                  improved navigation feedback, and beta homepage polish.
+                </p>
+              </div>
+            </article>
+
             <article class="log-entry" data-type="major">
               <div class="log-entry-top">
                 <h3>v0.1.9</h3>
@@ -443,19 +502,30 @@
 
       <section id="contact">
         <div class="section-heading">
-          <p class="section-label">06 // CONTACT</p>
+          <p class="section-label">07 // CONTACT</p>
           <h2>Connect</h2>
         </div>
 
-        <div class="card contact-card">
-          <p>Use the links below to connect with me and view more of my work.</p>
+        <div class="contact-grid">
+          <article class="card contact-card">
+            <h3>Primary Links</h3>
+            <p>Use the links below to connect with me and view more of my work.</p>
 
-          <div class="contact-links">
-            <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/kasimu-ellis-3b638b238/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="mailto:kasis.ellisjr@gmail.com">Email</a>
-            <button type="button" id="copy-email-button">Copy Email</button>
-          </div>
+            <div class="contact-links">
+              <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/kasimu-ellis-3b638b238/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="mailto:kasis.ellisjr@gmail.com">Email</a>
+              <button type="button" id="copy-email-button">Copy Email</button>
+            </div>
+          </article>
+
+          <article class="card contact-card">
+            <h3>Availability</h3>
+            <p>
+              Open to technical, creative, and portfolio-building opportunities that connect data,
+              development, and design.
+            </p>
+          </article>
         </div>
       </section>
     </main>
@@ -464,12 +534,12 @@
       <div class="footer-grid">
         <div>
           <p>&gt; Welcome to The Unbound Set</p>
-          <p class="footer-note">System stable. Bundled v0.1.9 milestone deployed.</p>
+          <p class="footer-note">System stable. Bundled v0.2.0 beta milestone deployed.</p>
         </div>
         <div class="footer-status">
           <p>MODE: PORTFOLIO</p>
           <p>INTERFACE: TERMINAL</p>
-          <p>BUILD: v0.1.9</p>
+          <p>BUILD: v0.2.0</p>
         </div>
       </div>
     </footer>

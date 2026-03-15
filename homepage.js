@@ -12,6 +12,8 @@ const projectFilters = document.querySelectorAll(".project-filter");
 const projectItems = document.querySelectorAll(".project-item");
 const copyEmailButton = document.getElementById("copy-email-button");
 const backToTopButton = document.getElementById("back-to-top");
+const navLinks = document.querySelectorAll(".site-nav a");
+const sections = document.querySelectorAll("main section[id]");
 
 const detailTitle = document.getElementById("detail-title");
 const detailSummary = document.getElementById("detail-summary");
@@ -29,6 +31,10 @@ const commandResponses = {
   about: {
     text: "Profile loaded: creative developer focused on analytics, web development, design, and technical exploration.",
     target: "#about"
+  },
+  summary: {
+    text: "Profile summary loaded: roles, core areas, and creative interests.",
+    target: "#summary"
   },
   focus: {
     text: "Current focus loaded: data & analytics, web development, and creative systems.",
@@ -48,6 +54,10 @@ const commandResponses = {
   },
   home: {
     text: "Homepage hero loaded.",
+    target: "#hero"
+  },
+  top: {
+    text: "Returned to top of interface.",
     target: "#hero"
   }
 };
@@ -151,9 +161,6 @@ if (commandForm && commandInput) {
     if (commandResponses[value]) {
       typeOutput(commandResponses[value].text);
       navigateTo(commandResponses[value].target);
-    } else if (value === "top") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      typeOutput("Returned to top of interface.");
     } else {
       typeOutput(`Unknown command: ${value}`);
     }
@@ -273,5 +280,25 @@ if (backToTopButton) {
   });
 }
 
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      const id = entry.target.getAttribute("id");
+      navLinks.forEach((link) => {
+        const isActive = link.getAttribute("href") === `#${id}`;
+        link.classList.toggle("active-link", isActive);
+      });
+    });
+  },
+  {
+    rootMargin: "-30% 0px -55% 0px",
+    threshold: 0.1
+  }
+);
+
+sections.forEach((section) => observer.observe(section));
+
 typeOutput("Awaiting input...");
-console.log("v0.1.9 loaded.");
+console.log("v0.2.0 loaded.");
