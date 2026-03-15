@@ -3,10 +3,11 @@
 The Unbound Set is a terminal-inspired personal website and digital portfolio for my projects, technical work, and creative development in data analytics and web development.
 
 ## Version
-Current version: `v0.2.0`
+Current version: `v0.2.1`
 
 ## Project Status
-This version acts as a major homepage beta milestone. It expands the portfolio with richer terminal interactions, project browsing tools, improved logs, stronger contact and summary sections, and overall interface polish.
+This version acts as a larger bundled milestone covering the planned improvements. It refines the Selected Work section into a more structured project workspace, improves project browsing and detail flow, and applies stronger layout polish across the homepage.
+
 
 ## Current Homepage Sections
 - Home

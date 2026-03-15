@@ -130,91 +130,96 @@
           <button type="button" class="project-filter" data-project-filter="creative">Creative</button>
         </div>
 
-        <article class="card featured-project project-item" data-project-type="web">
-          <div class="featured-header">
-            <div>
-              <p class="card-label">FEATURED PROJECT</p>
-              <h3>Flight Map Project</h3>
+        <div class="projects-workspace">
+          <div class="projects-browser">
+            <article class="card featured-project project-item" data-project-type="web">
+              <div class="featured-header">
+                <div>
+                  <p class="card-label">FEATURED PROJECT</p>
+                  <h3>Flight Map Project</h3>
+                </div>
+                <span class="project-status">ACTIVE</span>
+              </div>
+
+              <p>
+                A real-time interactive mapping project built to visualize live location data
+                through a responsive interface using modern web development tools.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Transforms data into a visual mapping experience</li>
+                <li>Uses front-end development and data handling together</li>
+                <li>Represents web, API, and interface design skills</li>
+              </ul>
+
+              <p class="card-meta">HTML / CSS / JavaScript / Leaflet / API Data</p>
+
+              <div class="card-links">
+                <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                <a href="#logs">View Log</a>
+                <button type="button" class="detail-button" data-project="flight-map">Details</button>
+              </div>
+            </article>
+
+            <div class="project-list compact-project-list">
+              <article class="card project-card project-item" data-project-type="database">
+                <div class="card-top">
+                  <p class="card-label">DATABASE</p>
+                  <span class="project-status">ARCHIVE</span>
+                </div>
+                <h3>Normalization, ERDs and DDL</h3>
+                <p>
+                  A database design project focused on normalization, entity relationship diagrams,
+                  and structured schema creation for well-organized relational systems.
+                </p>
+                <p class="card-meta">Database Design / ERD / SQL / DDL</p>
+                <div class="card-links">
+                  <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                  <a href="#logs">View Log</a>
+                  <button type="button" class="detail-button" data-project="db-design">Details</button>
+                </div>
+              </article>
+
+              <article class="card project-card project-item" data-project-type="creative">
+                <div class="card-top">
+                  <p class="card-label">CREATIVE SYSTEMS</p>
+                  <span class="project-status">WIP</span>
+                </div>
+                <h3>Rogue Lite Game Concept WIP</h3>
+                <p>
+                  A work-in-progress game concept exploring progression systems, mechanics,
+                  structure, and creative worldbuilding through iterative design.
+                </p>
+                <p class="card-meta">Game Design / Systems / Worldbuilding</p>
+                <div class="card-links">
+                  <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                  <a href="#logs">View Log</a>
+                  <button type="button" class="detail-button" data-project="rogue-lite">Details</button>
+                </div>
+              </article>
             </div>
-            <span class="project-status">ACTIVE</span>
           </div>
 
-          <p>
-            A real-time interactive mapping project built to visualize live location data
-            through a responsive interface using modern web development tools.
-          </p>
-
-          <ul class="project-highlights">
-            <li>Transforms data into a visual mapping experience</li>
-            <li>Uses front-end development and data handling together</li>
-            <li>Represents web, API, and interface design skills</li>
-          </ul>
-
-          <p class="card-meta">HTML / CSS / JavaScript / Leaflet / API Data</p>
-
-          <div class="card-links">
-            <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-            <a href="#logs">View Log</a>
-            <button type="button" class="detail-button" data-project="flight-map">Details</button>
-          </div>
-        </article>
-
-        <div class="project-list">
-          <article class="card project-card project-item" data-project-type="database">
-            <div class="card-top">
-              <p class="card-label">DATABASE</p>
-              <span class="project-status">ARCHIVE</span>
+          <article class="card project-detail-panel" id="project-detail-panel">
+            <p class="card-label">DETAIL PANEL</p>
+            <div class="detail-header">
+              <h3 id="detail-title">Flight Map Project</h3>
+              <span id="detail-status" class="project-status">ACTIVE</span>
             </div>
-            <h3>Normalization, ERDs and DDL</h3>
-            <p>
-              A database design project focused on normalization, entity relationship diagrams,
-              and structured schema creation for well-organized relational systems.
+            <p id="detail-category" class="detail-category">WEB / DATA</p>
+            <p id="detail-summary">
+              Interactive mapping build focused on live data visualization, interface design, and responsive display.
             </p>
-            <p class="card-meta">Database Design / ERD / SQL / DDL</p>
-            <div class="card-links">
-              <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-              <a href="#logs">View Log</a>
-              <button type="button" class="detail-button" data-project="db-design">Details</button>
-            </div>
-          </article>
-
-          <article class="card project-card project-item" data-project-type="creative">
-            <div class="card-top">
-              <p class="card-label">CREATIVE SYSTEMS</p>
-              <span class="project-status">WIP</span>
-            </div>
-            <h3>Rogue Lite Game Concept WIP</h3>
-            <p>
-              A work-in-progress game concept exploring progression systems, mechanics,
-              structure, and creative worldbuilding through iterative design.
-            </p>
-            <p class="card-meta">Game Design / Systems / Worldbuilding</p>
-            <div class="card-links">
-              <a href="https://github.com/KasisEllisJr" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-              <a href="#logs">View Log</a>
-              <button type="button" class="detail-button" data-project="rogue-lite">Details</button>
-            </div>
+            <p id="detail-stack" class="card-meta">HTML / CSS / JavaScript / Leaflet / API Data</p>
+            <ul id="detail-points" class="project-highlights">
+              <li>Built around live or refreshed data visualization</li>
+              <li>Combines mapping tools with front-end interface logic</li>
+              <li>Represents technical and presentation-focused development</li>
+            </ul>
           </article>
         </div>
-
-        <article class="card project-detail-panel" id="project-detail-panel">
-          <p class="card-label">DETAIL PANEL</p>
-          <div class="detail-header">
-            <h3 id="detail-title">Flight Map Project</h3>
-            <span id="detail-status" class="project-status">ACTIVE</span>
-          </div>
-          <p id="detail-category" class="detail-category">WEB / DATA</p>
-          <p id="detail-summary">
-            Interactive mapping build focused on live data visualization, interface design, and responsive display.
-          </p>
-          <p id="detail-stack" class="card-meta">HTML / CSS / JavaScript / Leaflet / API Data</p>
-          <ul id="detail-points" class="project-highlights">
-            <li>Built around live or refreshed data visualization</li>
-            <li>Combines mapping tools with front-end interface logic</li>
-            <li>Represents technical and presentation-focused development</li>
-          </ul>
-        </article>
       </section>
+
 
       <section id="about">
         <div class="section-heading">

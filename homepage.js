@@ -189,6 +189,10 @@ detailButtons.forEach((button) => {
 
     detailPanel.scrollIntoView({ behavior: "smooth", block: "start" });
     typeOutput(`Detail panel loaded: ${project.title}.`);
+    detailPanel.classList.add("detail-flash");
+    setTimeout(() => {
+      detailPanel.classList.remove("detail-flash");
+    }, 450);
   });
 });
 
